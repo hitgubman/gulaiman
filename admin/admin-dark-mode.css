@@ -1,0 +1,240 @@
+/* Dark mode styles for admin page card headers and backgrounds */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/* SweetAlert2 Dark Mode Styles */
+body.dark-mode .swal2-popup {
+    background: #2c2c2c !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7) !important;
+}
+
+body.dark-mode .swal2-title {
+    color: #ffffff !important;
+}
+
+body.dark-mode .swal2-content {
+    color: #cccccc !important;
+}
+
+body.dark-mode .swal2-styled.swal2-confirm {
+    background-color: #4caf50 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .swal2-styled.swal2-cancel {
+    background-color: #f44336 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* General styling for all icons in dark mode */
+body.dark-mode .swal2-icon {
+    filter: none !important; /* Removes problematic filters like invert() */
+}
+
+/* Specific styling for the SUCCESS icon */
+body.dark-mode .swal2-icon.swal2-success {
+    background-color: #2c2c2c !important; /* Dark background for the icon area */
+    border: none !important; /* Remove any default borders that might be white */
+    width: 5em;  /* Standard SweetAlert2 icon width */
+    height: 5em; /* Standard SweetAlert2 icon height */
+    padding: 0;  /* Remove any padding */
+    box-sizing: border-box; /* Ensure width/height are not affected by border/padding */
+    position: relative; /* Crucial for positioning the ::before pseudo-element */
+}
+
+body.dark-mode .swal2-icon.swal2-success {
+    background-color: #2c2c2c !important; /* Dark background for the icon area */
+    border: none !important; /* Remove any default borders that might be white */
+/* Dark mode for other page elements (styles from your original file) */
+}
+
+body.dark-mode .swal2-success-line-tip,
+body.dark-mode .swal2-success-line-long {
+    background-color: #4caf50 !important; /* Your desired checkmark color (e.g., green) */
+}
+
+/* The success ring (the circle that appears around the checkmark) */
+body.dark-mode .swal2-success-ring {
+    /* Default is a light green border. Change to your themed green. */
+    border: .25em solid #4caf50 !important; /* Solid green ring */
+    /* For a slightly transparent ring like SA's default light mode:
+    border: .25em solid rgba(76, 175, 80, 0.5) !important; */
+}
+
+body.dark-mode .swal2-success-fix {
+    background-color: #2c2c2c !important; /* Match the icon container background */
+}
+
+body.dark-mode .swal2-success-circular-line-left,
+body.dark-mode .swal2-success-circular-line-right {
+    background-color: #2c2c2c !important; /* Match the icon container background */
+}
+
+body.dark-mode .content,
+body.dark-mode .container,
+body.dark-mode .container-fluid {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .card.p-4.shadow-sm {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .card-header {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .card-background {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .card-body {
+    color: #e0e0e0 !important;
+    border-color: #444444 !important;
+}
+
+/* ... (continue with the rest of your admin-dark-mode.css styles) ... */
+
+/* Ensure to include styles for .table, input, .modal-content etc. as they were in your original file */
+/* For example: */
+body.dark-mode .table-dark {
+    background-color: #343a40 !important;
+    color: #f8f9fa !important;
+}
+
+body.dark-mode .card * {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode a,
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+    color: #63aeff !important; /* Adjusted for better visibility on dark backgrounds */
+}
+
+body.dark-mode .btn,
+body.dark-mode .btn:hover,
+body.dark-mode .btn:focus {
+    color: #e0e0e0 !important;
+    background-color: #1f1f1f !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .modal-content {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    background-color: #1f1f1f !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .modal-body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+body.dark-mode .topbar {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .sidebar-desktop {
+    background-color: #1f1f1f !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .sidebar-desktop a {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .sidebar-desktop a:hover {
+    background-color: #343a40 !important;
+}
+
+body.dark-mode #mobileSidebar,
+body.dark-mode #mobileSidebar * {
+    color: white !important; /* This was specific, keeping it */
+}
+
+body.dark-mode .mobile-toggle {
+    color: white !important;
+    border-color: white !important;
+}
+
+body.dark-mode .mobile-toggle svg,
+body.dark-mode .mobile-toggle i {
+    color: white !important;
+    fill: white !important;
+}
+
+body.dark-mode .mobile-toggle:hover,
+body.dark-mode .mobile-toggle:focus {
+    color: white !important;
+    border-color: white !important;
+    background-color: transparent !important;
+}
+
+body.dark-mode #mobileSidebar .btn-close {
+    filter: invert(100%) brightness(200%) !important;
+}
+
+/* The exclusion rules for buttons and specific cards remain important */
+body.dark-mode button,
+body.dark-mode button * {
+    /* Consider if this is too broad or if specific button classes should be targeted.
+       If SweetAlert buttons are affected undesirably, they are handled by .swal2-styled rules above. */
+    /* background-color: initial !important; */ /* Commented out if SA buttons need their dark theme */
+    /* color: initial !important; */
+    /* border-color: initial !important; */
+    /* box-shadow: none !important; */
+    /* filter: none !important; */
+}
+
+body.dark-mode .card.total-tower,
+body.dark-mode .card.tower-aktif,
+body.dark-mode .card.tower-nonaktif {
+    background-color: initial !important;
+    color: initial !important;
+    border-color: initial !important;
+    box-shadow: none !important;
+    filter: none !important;
+}

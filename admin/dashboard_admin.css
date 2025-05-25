@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f8ff;
+}
+
+/* Custom CSS for logout button animation */
+#tombolLogOut {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#tombolLogOut:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  background-color: #000810 !important;
+  border-color: #000810 !important;
+}
+
+.topbar {
+  background-color: #1e1e1e;
+  color: white;
+  height: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+}
+
+@media (max-width: 767px) {
+  .topbar span {
+    font-size: 0.9rem;
+    white-space: normal;
+    margin-top: 4px;
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+.sidebar-desktop {
+  background-color: #1e1e1e;
+  color: white;
+  width: 220px;
+  height: 100vh;
+  padding-top: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar-desktop a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+}
+
+.sidebar-desktop a:hover {
+  background-color: #343a40;
+}
+
+.content {
+  margin-top: 56px;
+  padding: 20px;
+}
+
+.tower-image {
+  width: 175px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 10px auto;
+  image-rendering: auto;
+}
+
+input[readonly] {
+  background-color: #f5f5f5; /* lighter gray background */
+  color: #666;               /* softer text color */
+  border-color: #ccc;         /* lighter border */
+}
+
+/* Normal placeholder */
+input::placeholder {
+  color: gray;
+  transition: color 0.3s ease;
+  font-style: italic;
+}
+
+/* When input is focused */
+input:focus::placeholder {
+  color:rgb(212, 212, 212); /* or lighter color, or fade */
+}
+
+h2, h4 {
+  font-weight: bold !important;
+}
+
+@media (min-width: 768px) {
+  .content {
+    margin-left: 220px;
+  }
+
+  .mobile-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar-desktop {
+    display: none;
+  }
+  .topbar-logout-form {
+    display: none;
+  }
+}

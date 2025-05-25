@@ -1,0 +1,492 @@
+:root {
+    --bg-color: #f0f8ff;
+    --text-color: #212529;
+    --header-bg-color: #212121;
+    --header-text-color: white;
+    --footer-bg-color: #1a1a1a;
+    --footer-text-color: #ccc;
+    --table-header-bg: #212121;
+    --table-header-text: white;
+    --table-row-odd-bg: #f2f6fa;
+    --table-row-even-bg: white;
+    --table-row-hover-bg: #dbe9ff;
+    --detail-table-row-odd-bg: #f9f9f9;
+    --detail-table-row-hover-bg: #e2e6ea;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+}
+.dark-mode {
+    --bg-color: #212121;
+    --text-color: #e0e0e0;
+    --header-bg-color: #1f1f1f;
+    --header-text-color: #e0e0e0;
+    --footer-bg-color: #1f1f1f;
+    --footer-text-color: #ccc;
+    --table-header-bg: #212121;
+    --table-header-text: #e0e0e0;
+    --table-row-odd-bg: #1a1a1a;
+    --table-row-even-bg: #121212;
+    --table-row-hover-bg: #212121;
+    --detail-table-row-odd-bg: #1a1a1a;
+    --detail-table-row-hover-bg: #212121;
+    --link-color: #90caf9;
+    --link-hover-color: #0056b3;
+}
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --header-bg-color: #1f1f1f;
+    --header-text-color: #e0e0e0;
+    --footer-bg-color: #1f1f1f;
+    --footer-text-color: #ccc;
+    --table-header-bg: #212121;
+    --table-header-text: #e0e0e0;
+    --table-row-odd-bg: #1a1a1a;
+    --table-row-even-bg: #121212;
+    --table-row-hover-bg: #212121;
+    --link-color: #90caf9;
+    --link-hover-color: #0056b3;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: var(--text-color);
+}
+
+
+.header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+body.dark-mode nav.navbar {
+    background-color: #212121 !important;
+}
+
+main {
+    flex: 1;
+  }
+  
+
+.header a{
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 3px;
+    overflow: hidden; /* Ensures rounded corners apply */
+    border: 2px solid black;
+}
+
+/* Table Header */
+th {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-text);
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(odd) {
+    background-color: var(--table-row-odd-bg); /* Light grey-blue */
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--table-row-even-bg);
+}
+
+/* Image Styling */
+td img {
+    width:175px; /* Adjust as needed */
+    height: 122px;
+    border-radius: 10px;
+    object-fit: cover; /* Prevents distortion */
+    display: block;
+}
+
+/* Placeholder Image (For missing images) */
+td img[src=""], td img:not([src]) {
+    background-color: #ddd; /* Grey background for missing images */
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+/* Centering Image Column */
+td:nth-child(2) {
+    text-align: center;
+}
+
+/* Adjusting Status & Provider Columns */
+td:nth-child(4) {
+    font-weight: bold;
+}
+
+td.fw-bold {
+    vertical-align: middle !important;
+}
+
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 600px;
+    }
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header a, .header button {
+        width: 100%;
+        padding: 30px;
+        margin: 5px 0;
+    }
+
+    /* Dark mode toggle button responsive */
+    #darkModeToggle {
+        width: 100% !important;
+        padding: 10px !important;
+        font-size: 1rem !important;
+        margin: 10px 0 !important;
+    }
+}
+
+/* Fix navbar toggler z-index and pointer events */
+.navbar-toggler {
+    position: relative;
+    z-index: 1051; /* higher than modal backdrop */
+    pointer-events: auto;
+}
+
+.container-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: 20px 40px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Aligns text on left and logo on right */
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer-text p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Style for the logo */
+.footer-logo img {  
+    width: 80px; /* Adjust size */
+    height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 10px;
+    }
+}
+
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+}
+
+.page-background {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+.card-background {
+    background-color: var(--header-bg-color);
+    border-radius: 20px;
+}
+
+/* CSS Improvements for consistent fonts, colors, and smooth transitions */
+
+/* Body font and color */
+body, html {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Smooth transitions for buttons and links */
+a, button, .btn {
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Footer improvements */
+.footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 30px 40px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+
+
+.kominfo {
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adjusts spacing between links */
+    align-items: center;
+    margin-right: 50px; /* Moves group to the left */
+}
+
+/* Additional fix for mobile layout of search input and "Tambah Data" button */
+@media screen and (max-width: 576px) {
+    .card-header.d-flex > div.d-flex {
+        flex-direction: column !important;
+        width: 100%;
+        gap: 10px !important;
+    }
+    .card-header.d-flex > div.d-flex > input[type="search"],
+    .card-header.d-flex > div.d-flex > a.btn {
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--link-hover-color) !important;
+    border-color: #004085 !important;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800 !important;
+    border-color: #d39e00 !important;
+}
+
+.btn-danger:hover {
+    background-color: #bd2130 !important;
+    border-color: #b21f2d !important;
+}
+
+/* Table row hover effect */
+tbody tr:hover {
+    background-color: var(--table-row-hover-bg) !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Search input styling */
+#tableSearch {
+    border: 2px solid #212121;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#tableSearch:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+
+.dataTables_length {
+    margin-bottom: 15px; /* Adjust the value as needed */
+    color: var(--text-color);
+}
+
+.dataTables_filter,
+.dataTables_info,
+.dataTables_paginate {
+    color: var(--text-color) !important;
+}
+
+.dataTables_length label,
+.dataTables_filter label,
+.dataTables_info,
+.dataTables_paginate {
+    color: var(--text-color) !important;
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--text-color) !important;
+}
+
+/* Badge styles for tower status */
+.badge-status {
+    padding: 0.35em 0.65em;
+    font-size: 0.85em;
+    border-radius: 0.25rem;
+    color: #fff;
+    display: inline-block;
+}
+
+/* Dark mode styles for Bootstrap modals */
+body.dark-mode .modal-content {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    border-color: #444;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    background-color: var(--header-bg-color);
+    border-color: #444;
+    color: var(--text-color);
+}
+
+body.dark-mode .modal-body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Dark mode specific styles for detail_tower.php table */
+body.dark-mode .table-responsive table.table-bordered {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+    border-color: #444;
+}
+
+body.dark-mode .table-responsive table.table-bordered th,
+body.dark-mode .table-responsive table.table-bordered td {
+    border-color: #444;
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+body.dark-mode .table-responsive table.table-bordered tbody tr:nth-child(odd) {
+    background-color: #222;
+}
+
+body.dark-mode .table-responsive table.table-bordered tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .table-responsive table.table-bordered tbody tr:hover {
+    background-color: #333;
+}
+.badge-active {
+    background-color: #28a745;
+}
+.badge-inactive {
+    background-color: #dc3545;
+}
+.badge-maintenance {
+    background-color: #ffc107;
+    color: #212529;
+}
+.badge-secondary {
+    background-color: #6c757d;
+}
+
+/* Responsive card for submit and contact pages */
+.responsive-card {
+    width: 450px;
+    max-width: 90vw;
+    height: auto;
+    min-height: auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+    .responsive-card {
+        width: 90vw;
+        height: auto;
+        min-height: 300px;
+        padding: 2rem 1.5rem; /* Increased horizontal padding for more space */
+        margin-left: 1rem; /* Add left margin */
+        margin-right: 1rem; /* Add right margin */
+        box-sizing: border-box;
+    }
+}
+
